@@ -1,0 +1,2 @@
+,np.tanh(std_delta_len),instruction_difficulty,not_gamed_baseline.astype(float)
+Llama-3-Instruct-8B-Mallows-SimPO-beta=10,-0.2241794366198301,-0.1899125422669437,0.0143351947966899

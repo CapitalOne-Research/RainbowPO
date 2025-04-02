@@ -1,0 +1,2 @@
+,np.tanh(std_delta_len),instruction_difficulty,not_gamed_baseline.astype(float)
+Llama-3-Instruct-8B-Mallows-DPO-beta=0.05,-0.9431556932479013,-0.2116861066711881,-0.0403186089822022

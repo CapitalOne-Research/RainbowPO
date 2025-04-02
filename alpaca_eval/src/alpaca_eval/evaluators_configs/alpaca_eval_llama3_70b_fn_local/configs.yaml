@@ -1,0 +1,13 @@
+alpaca_eval_llama3_70b_fn_local:
+  prompt_template: "alpaca_eval_llama3_70b_fn_local/alpaca_eval_fn.txt"
+  fn_completions: "openai_completions"
+  completions_kwargs:
+    requires_chatml: True
+    model_name: "Meta-Llama-3-70B-Instruct"
+    max_tokens: 100
+    temperature: 0
+    price_per_token: 9e-7
+    client_kwargs:
+      base_url: "http://localhost:8000/v1"
+  fn_completion_parser: "ranking_parser"
+  batch_size: 1

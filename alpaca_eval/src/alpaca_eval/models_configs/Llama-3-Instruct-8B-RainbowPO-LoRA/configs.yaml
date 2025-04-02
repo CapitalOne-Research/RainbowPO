@@ -1,0 +1,17 @@
+Llama-3-Instruct-8B-LoRA-RainbowPO-beta=0.01:
+  completions_kwargs:
+    batch_size: 400
+    # do_sample: true
+    max_new_tokens: 4096
+    model_kwargs:
+      dtype: bfloat16
+    model_name: <somepath>/trl/models_rlhf/Llama3-Instruct_armorm_LoRA_r_128_a_256_rainbowpo_beta_0.01
+    stop_token_ids:
+    - 128001
+    - 128009
+    temperature: 0.7
+    top_p: 1.0
+    seed: 42
+  fn_completions: vllm_local_completions
+  pretty_name: Llama-3-Instruct-8B-LoRA-RainbowPO-beta=0.01
+  prompt_template: Llama-3-Instruct-8B-RainbowPO/prompt.txt
