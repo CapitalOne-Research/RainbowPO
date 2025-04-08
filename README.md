@@ -1,19 +1,19 @@
 # RainbowPO : A Unified Framework for Combining Improvements in Preference Optimization
 
-## Our base codebase is build on a modified version of [Huggingface TRL](https://github.com/huggingface/trl)
+This is the code repository of our [ICLR 2025 paper](https://openreview.net/forum?id=trKee5pIFv).
+### Our base codebase is build on a modified version of [Huggingface TRL](https://github.com/huggingface/trl)
 
-## We also have embedded `alpaca_eval` from https://github.com/tatsu-lab/alpaca_eval inside our repo for reproducibility.
+### We also have embedded `alpaca_eval` from https://github.com/tatsu-lab/alpaca_eval inside our repo for reproducibility.
 
 ## Preparation
 
 For both training and evaluations, the images on 0710 and 0731 should both be OK, training is previously done on `<some image>`, and evaluation has been tested on `<some image>`.
 
-### 1. Download the Model to be fine-tuned
-Download the model, like Llama3-8B-Instruct, which you are going to fine-tune to `model_path`.
+### 1. Download the base model to be finetuned
+Download a model (e.g., Llama3-8B-Instruct), which you are going to fine-tune, and set the path to `model_path`.
 
 ### 2. Data preparation
-
-Download the datasets from [Ultrafeedback Armorm](https://huggingface.co/datasets/princeton-nlp/llama3-ultrafeedback-armorm?row=0) created by SimPO authors,
+Download datasets from [Ultrafeedback Armorm](https://huggingface.co/datasets/princeton-nlp/llama3-ultrafeedback-armorm?row=0) created by SimPO authors,
 and transform it into the trl format (which is needed to successfully run the code for trl scripts). The transformation script is .
 
 ## Training
