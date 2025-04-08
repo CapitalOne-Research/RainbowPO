@@ -1,4 +1,4 @@
-# RainbowPO : A Unified Framework for Combining Improvements in Preference Optimization
+# RainbowPO: A Unified Framework for Combining Improvements in Preference Optimization
 
 This is the code repository of our [ICLR 2025 paper](https://openreview.net/forum?id=trKee5pIFv).
 ### Our base codebase is build on a modified version of [Huggingface TRL](https://github.com/huggingface/trl)
@@ -22,15 +22,15 @@ and transform it into the trl format (which is needed to successfully run the co
 For current implementation (by 08/22/2024), we first need to manually change the setups in the DPOconfig. Find the `dpo_config.py` under `trl\trainer\`. The
 main hyperparameters needed to change is 
 1. $\beta$: float type, which represents the penalty constant, default is 0.1 for dpo
-2. home advantage: float type, which is the $\gamma$ factor, default is 0 for dpo
-3. if_mixing_alpha: bool, which represents whether mixing reference policy and a fix home advantage as in the RainbowPO design, default is False for dpo
-4. mixing_alpha: float type, which is a constant within 0 and 1, default is 0.5
-5. length_normalization: bool type, whether to apply length normalization in dpo
-6. reference free: bool type, whether to ignore the reference policy term in the objective.
-7. neg_log_dispersion_mean: the scaling factor if applying Mallows-DPO.
-8. add_sft_loss: bool type, whether to add sft loss.
-9. sft_coef: float type, the sft loss constant
-10. loss_type: choose on in the loss list
+2. `home advantage`: float type, which is the $\gamma$ factor, default is 0 for dpo
+3. `if_mixing_alpha`: bool, which represents whether mixing reference policy and a fix home advantage as in the RainbowPO design, default is False for dpo
+4. `mixing_alpha`: float type, which is a constant within 0 and 1, default is 0.5
+5. `length_normalization`: bool type, whether to apply length normalization in dpo
+6. `reference_free`: bool type, whether to ignore the reference policy term in the objective.
+7. `neg_log_dispersion_mean`: the scaling factor if applying Mallows-DPO.
+8. `add_sft_loss`: bool type, whether to add sft loss.
+9. `sft_coef`: float type, the sft loss constant
+10. `loss_type`: choose on in the loss list
 
 ### An automatic script to change the hyperparameters in this file
 
@@ -43,7 +43,7 @@ main hyperparameters needed to change is
 5. `pip install wandb==0.17.5`, `wandb disabled`
 6. check in different .ipynbs for the accelerate commands to run, including the configs.
 
-## Evaluations
+## Evaluation
 
 1. cd alpaca_eval
 2. `pip install -e .`
